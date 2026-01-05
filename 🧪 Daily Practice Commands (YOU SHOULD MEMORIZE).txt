@@ -1,0 +1,23 @@
+// 🧪 Daily Git Practice Commands (MUST MEMORIZE)
+
+// Project Working Flow (Tree Style)
+DAILY_WORKFLOW/
+├── Check Status
+│    git status         # See current changes, staged/unstaged files
+├── Stage Files
+│    git add .          # Stage all changes
+│    # or stage specific file
+│    git add file.py
+├── Commit Changes
+│    git commit -m "message"   # Save changes locally with a message
+├── Pull Latest Changes
+│    git pull          # Update local repo with remote changes
+└── Push Changes
+     git push          # Send local commits to remote repository
+
+// ✅ Summary
+- **git status** → Know the current state of your repo  
+- **git add** → Stage files for commit  
+- **git commit -m** → Save your changes locally with a message  
+- **git pull** → Sync latest changes from remote  
+- **git push** → Upload your commits to remote repo  

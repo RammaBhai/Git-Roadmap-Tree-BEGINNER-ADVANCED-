@@ -1,0 +1,152 @@
+// 🧠 Git Workflow (REAL PROJECT)
+
+// Project Structure (Tree View)
+REAL_PROJECT/
+├── .git/
+├── README.md
+├── .gitignore
+├── src/
+│   ├── app.py
+│   └── utils.py
+├── tests/
+│   └── test_app.py
+└── requirements.txt
+
+// 🔰 PHASE 0: One-Time Setup (Local Machine)
+git --version
+git config --global user.name "Your Name"
+git config --global user.email "youremail@gmail.com"
+git config --list
+
+// 🔰 PHASE 1: Create / Clone Repository
+👉 Option A: Clone existing repo (MOST COMMON)
+    git clone https://github.com/username/REAL_PROJECT.git
+    cd REAL_PROJECT
+
+👉 Option B: Start from scratch
+    git init
+    git branch -M main
+
+// 🔰 PHASE 2: Basic Daily Workflow (CORE)
+📌 1. Check status
+    git status
+📌 2. Add files
+    git add .
+    # or
+    git add src/app.py
+📌 3. Commit changes
+    git commit -m "feat: initial project structure"
+📌 4. Push to GitHub
+    git push origin main
+📌 5. Pull from GitHub
+    git pull origin main
+
+// 🔰 PHASE 3: Branching Workflow (REAL TEAM STYLE)
+🌿 Branch Tree:
+main
+│
+├── dev
+│    ├── feature/login
+│    ├── feature/api
+│    └── bugfix/header
+└── hotfix/urgent-fix
+
+🔹 Create dev branch:
+    git checkout -b dev
+    git push origin dev
+
+🔹 Create feature branch:
+    git checkout dev
+    git pull origin dev
+    git checkout -b feature/login
+
+Work → commit:
+    git add .
+    git commit -m "feat: login API added"
+Push feature:
+    git push origin feature/login
+
+// 🔰 PHASE 4: Merge Feature → Dev
+git checkout dev
+git pull origin dev
+git merge feature/login
+git push origin dev
+
+(Optional cleanup):
+    git branch -d feature/login
+    git push origin --delete feature/login
+
+// 🔰 PHASE 5: Release Dev → Main (Production)
+git checkout main
+git pull origin main
+git merge dev
+git push origin main
+
+// 🔰 PHASE 6: Hotfix Workflow (URGENT BUG)
+git checkout main
+git checkout -b hotfix/fix-crash
+
+Fix → commit:
+    git add .
+    git commit -m "hotfix: crash on startup"
+    git push origin hotfix/fix-crash
+
+Merge hotfix:
+    git checkout main
+    git merge hotfix/fix-crash
+    git push origin main
+
+Also merge into dev:
+    git checkout dev
+    git merge hotfix/fix-crash
+    git push origin dev
+
+// 🔰 PHASE 7: Pull Latest Changes (VERY IMPORTANT)
+git pull origin main
+# or
+git pull origin dev
+
+// 🔰 PHASE 8: Undo / Fix Mistakes (REAL LIFE)
+❌ Undo uncommitted changes:
+    git checkout -- src/app.py
+❌ Unstage files:
+    git reset HEAD src/app.py
+❌ Amend last commit:
+    git commit --amend -m "fix: corrected commit message"
+❌ Revert pushed commit:
+    git revert <commit_hash>
+❌ Reset to previous commit (DANGEROUS):
+    git reset --hard <commit_hash>
+❌ Undo unstaged change:
+    git restore file.py
+❌ Undo staged file:
+    git restore --staged file.py
+❌ Undo last commit (keep code):
+    git reset --soft HEAD~1
+❌ Undo last commit (delete code):
+    git reset --hard HEAD~1
+
+// 🔰 PHASE 9: Logs & History
+git log
+git log --oneline --graph --all
+git show <commit_hash>
+git diff
+
+// 🔰 PHASE 10: Tags (Releases)
+git tag v1.0
+git push origin v1.0
+
+// ✅ FINAL REAL-PROJECT FLOW (MEMORIZE THIS)
+clone
+↓
+create dev
+↓
+create feature/*
+↓
+commit
+↓
+merge → dev
+↓
+merge → main
+↓
+deploy 🚀

@@ -1,0 +1,85 @@
+// 🌳 Git Roadmap Tree (BEGINNER → ADVANCED)
+
+// Git Learning Path
+Git Roadmap
+│
+├── 1️⃣ Basics (Must Learn First)
+│   ├── What is Git vs GitHub
+│   ├── git init                # Initialize a local repository
+│   ├── git status              # Check current changes
+│   ├── git add .               # Stage all changes
+│   ├── git commit -m           # Commit changes with message
+│   ├── git log                 # View commit history
+│   └── git clone               # Copy a remote repository
+│
+├── 2️⃣ Working with Remote (Daily Use)
+│   ├── git remote -v           # List remote URLs
+│   ├── git push                # Upload commits to remote
+│   ├── git pull                # Fetch & merge remote changes
+│   ├── git fetch               # Fetch remote changes only
+│   └── git branch -M main      # Rename branch to main
+│
+├── 3️⃣ Branching (VERY IMPORTANT)
+│   ├── git branch              # List branches
+│   ├── git checkout -b feature-x  # Create & switch to new branch
+│   ├── git switch              # Switch between branches
+│   ├── git merge               # Merge branches
+│   └── git branch -d feature-x # Delete branch
+│
+├── 4️⃣ Undo & Fix Mistakes (POWER SKILLS)
+│   ├── git restore file        # Undo unstaged changes
+│   ├── git restore --staged file  # Unstage staged changes
+│   ├── git reset --soft HEAD~1     # Undo last commit (keep code)
+│   ├── git reset --hard HEAD~1     # Undo last commit (delete code)
+│   └── git revert commit_id        # Revert pushed commit safely
+│
+├── 5️⃣ Stashing (Temporary Save)
+│   ├── git stash               # Temporarily save changes
+│   ├── git stash list          # List stashes
+│   ├── git stash pop           # Apply & remove stash
+│   └── git stash drop          # Delete stash
+│
+├── 6️⃣ Logs & History
+│   ├── git log --oneline       # Short commit history
+│   ├── git diff                # View changes between commits
+│   ├── git show commit_id      # Detailed info about a commit
+│   └── git blame file          # See who changed each line
+│
+├── 7️⃣ Collaboration (Team Work)
+│   ├── Fork vs Clone           # Understand workflow differences
+│   ├── Pull Requests (PR)      # Request code review & merge
+│   ├── Code Reviews            # Review teammate code
+│   ├── Merge conflicts         # Identify conflicting changes
+│   └── Resolve conflicts       # Fix conflicts and merge
+│
+├── 8️⃣ Tags & Releases
+│   ├── git tag v1.0            # Create release tag
+│   ├── git push --tags          # Push tags to remote
+│   └── GitHub Releases         # Publish version on GitHub
+│
+├── 9️⃣ Advanced Git (Optional but PRO)
+│   ├── git rebase              # Reapply commits on top of another branch
+│   ├── git cherry-pick         # Apply specific commit to another branch
+│   ├── git reflog              # Track reference history
+│   ├── git submodule           # Include another repo inside repo
+│   └── git worktree            # Multiple working trees for one repo
+│
+└── 🔟 Best Practices (Industry)
+    ├── .gitignore              # Ignore unnecessary files
+    ├── Meaningful commits      # Write descriptive commit messages
+    ├── Small commits           # Keep changes manageable
+    ├── Feature branches        # Isolate features in separate branches
+    ├── Clean history           # Maintain readable commit history
+    └── GitFlow strategy        # Follow structured branching workflow
+
+// ✅ Summary
+- **Basics** → Initialize repo, commit, check status  
+- **Remote Work** → Push, pull, fetch updates  
+- **Branching** → Create, switch, merge, delete branches  
+- **Undo & Fix** → Restore, reset, revert mistakes safely  
+- **Stashing** → Save work temporarily without committing  
+- **Logs & History** → Track changes, blame, diffs  
+- **Collaboration** → Fork, PRs, resolve conflicts  
+- **Tags & Releases** → Versioning & GitHub releases  
+- **Advanced Git** → Rebase, cherry-pick, reflog, submodules  
+- **Best Practices** → Meaningful commits, clean history, GitFlow
